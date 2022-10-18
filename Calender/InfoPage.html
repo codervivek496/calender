@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+        function insert() {
+
+            var empid = $('#empid').val();
+
+            var login = $('#login').val();
+
+            var logout = $('#logout').val();
+
+            var project = $('#project').val();
+
+            var description = $('#description').val()
+
+            alert(empid);
+
+            alert(login);
+
+            alert(logout);
+
+            alert(project);
+
+            alert(description);
+
+            $.ajax({
+
+                "url": "InsertDetails.aspx",
+
+                "type": "json",
+
+                "method": "post",
+
+                data: { "EMPID": empid, "LOGINTIME": login, "LOGOUTTIME": logout, "PROJECTNAME": project, "DESCRIPTION": description },
+
+                success: function () {
+
+                    alert("Inserted")
+
+
+
+                }
+
+            })
+
+        }
+
+        $(document).ready(function () {
+
+            $('#addbtn').on('click', function () {
+
+                $("body").unbind("click");
+
+                alert('add')
+
+            })
+
+        })
+
+
+
+    </script>
+
+</head>
+
+<body id="logininfo" style="background-color:aquamarine">
+
+    <center>
+
+        <h1>LOGIN PAGE</h1>
+
+        <table style="border:groove 5px">
+
+            <tr>
+
+                <td>Employee id</td>
+
+                <td>
+
+                    <input type="text" id="empid" />
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>Login Time</td>
+
+                <td>
+
+                    <select name="time" id="login">
+
+                        <option value="00:00">12.00 AM</option>
+
+                        <option value="00:30">12.30 AM</option>
+
+                        <option value="01:00">01.00 AM</option>
+
+                        <option value="01:30">01.30 AM</option>
+
+                        <option value="02:00">02.00 AM</option>
+
+                        <option value="02:30">02.30 AM</option>
+
+                        <option value="03:00">03.00 AM</option>
+
+                        <option value="03:30">03.30 AM</option>
+
+                        <option value="04:00">04.00 AM</option>
+
+                        <option value="04:30">04.30 AM</option>
+
+                        <option value="05:00">05.00 AM</option>
+
+                        <option value="05:30">05.30 AM</option>
+
+                        <option value="06:00">06.00 AM</option>
+
+                        <option value="06:30">06.30 AM</option>
+
+                        <option value="07:00">07.00 AM</option>
+
+                        <option value="07:30">07.30 AM</option>
+
+                        <option value="08:00">08.00 AM</option>
+
+                        <option value="08:30">08.30 AM</option>
+
+                        <option value="09:00">09.00 AM</option>
+
+                        <option value="09:30">09.30 AM</option>
+
+                        <option value="10:00">10.00 AM</option>
+
+                        <option value="10:30">10.30 AM</option>
+
+                        <option value="11:00">11.00 AM</option>
+
+                        <option value="11:30">11.30 AM</option>
+
+                        <option value="12:00">12.00 PM</option>
+
+                        <option value="12:30">12.30 PM</option>
+
+                        <option value="13:00">01.00 PM</option>
+
+                        <option value="13:30">01.30 PM</option>
+
+                        <option value="14:00">02.00 PM</option>
+
+                        <option value="14:30">02.30 PM</option>
+
+                        <option value="15:00">03.00 PM</option>
+
+                        <option value="15:30">03.30 PM</option>
+
+                        <option value="16:00">04.00 PM</option>
+
+                        <option value="16:30">04.30 PM</option>
+
+                        <option value="17:00">05.00 PM</option>
+
+                        <option value="17:30">05.30 PM</option>
+
+                        <option value="18:00">06.00 PM</option>
+
+                        <option value="18:30">06.30 PM</option>
+
+                        <option value="19:00" selected="">07.00 PM</option>
+
+                        <option value="19:30">07.30 PM</option>
+
+                        <option value="20:00">08.00 PM</option>
+
+                        <option value="20:30">08.30 PM</option>
+
+                        <option value="21:00">09.00 PM</option>
+
+                        <option value="21:30">09.30 PM</option>
+
+                        <option value="22:00">10.00 PM</option>
+
+                        <option value="22:30">10.30 PM</option>
+
+                        <option value="23:00">11.00 PM</option>
+
+                        <option value="23:30">11.30 PM</option>
+
+                    </select>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>Logout Time</td>
+
+                <td>
+
+                    <select name="time" id="logout">
+
+                        <option value="00:00">12.00 AM</option>
+
+                        <option value="00:30">12.30 AM</option>
+
+                        <option value="01:00">01.00 AM</option>
+
+                        <option value="01:30">01.30 AM</option>
+
+                        <option value="02:00">02.00 AM</option>
+
+                        <option value="02:30">02.30 AM</option>
+
+                        <option value="03:00">03.00 AM</option>
+
+                        <option value="03:30">03.30 AM</option>
+
+                        <option value="04:00">04.00 AM</option>
+
+                        <option value="04:30">04.30 AM</option>
+
+                        <option value="05:00">05.00 AM</option>
+
+                        <option value="05:30">05.30 AM</option>
+
+                        <option value="06:00">06.00 AM</option>
+
+                        <option value="06:30">06.30 AM</option>
+
+                        <option value="07:00">07.00 AM</option>
+
+                        <option value="07:30">07.30 AM</option>
+
+                        <option value="08:00">08.00 AM</option>
+
+                        <option value="08:30">08.30 AM</option>
+
+                        <option value="09:00">09.00 AM</option>
+
+                        <option value="09:30">09.30 AM</option>
+
+                        <option value="10:00">10.00 AM</option>
+
+                        <option value="10:30">10.30 AM</option>
+
+                        <option value="11:00">11.00 AM</option>
+
+                        <option value="11:30">11.30 AM</option>
+
+                        <option value="12:00">12.00 PM</option>
+
+                        <option value="12:30">12.30 PM</option>
+
+                        <option value="13:00">01.00 PM</option>
+
+                        <option value="13:30">01.30 PM</option>
+
+                        <option value="14:00">02.00 PM</option>
+
+                        <option value="14:30">02.30 PM</option>
+
+                        <option value="15:00">03.00 PM</option>
+
+                        <option value="15:30">03.30 PM</option>
+
+                        <option value="16:00">04.00 PM</option>
+
+                        <option value="16:30">04.30 PM</option>
+
+                        <option value="17:00">05.00 PM</option>
+
+                        <option value="17:30">05.30 PM</option>
+
+                        <option value="18:00">06.00 PM</option>
+
+                        <option value="18:30">06.30 PM</option>
+
+                        <option value="19:00" selected="">07.00 PM</option>
+
+                        <option value="19:30">07.30 PM</option>
+
+                        <option value="20:00">08.00 PM</option>
+
+                        <option value="20:30">08.30 PM</option>
+
+                        <option value="21:00">09.00 PM</option>
+
+                        <option value="21:30">09.30 PM</option>
+
+                        <option value="22:00">10.00 PM</option>
+
+                        <option value="22:30">10.30 PM</option>
+
+                        <option value="23:00">11.00 PM</option>
+
+                        <option value="23:30">11.30 PM</option>
+
+                    </select>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>Project Name</td>
+
+                <td>
+
+                    <input type="text" id="project" name="project" />
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>Description</td>
+
+                <td>
+
+                    <input type="text" id="description" name="description" />
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td colspan="2" align="center">
+
+                    <input type="button" id="submitbtn" name="submitbtn" value="Submit" onclick="insert()" />
+
+                    <input type="button" id="addbtn" name="addbtn" value="+" onclick="add()" />
+
+                </td>
+
+            </tr>
+
+
+
+        </table>
+
+    </center>
+
+</body>
+
+</html> 

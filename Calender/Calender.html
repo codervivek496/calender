@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Calender</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#click").on('click', function () {
+                window.location.replace("InfoPage.html")
+            })
+        })
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="calendar">
+            <div class="front">
+                <div class="current-date">
+                    <h1>October 2022</h1>
+                </div>
+            </div>
+
+            <div class="current-month">
+                <ul class="week-days">
+                    <li>MON</li>
+                    <li>TUE</li>
+                    <li>WED</li>
+                    <li>THU</li>
+                    <li>FRI</li>
+                    <li>SAT</li>
+                    <li>SUN</li>
+                </ul>
+
+                <div class="weeks">
+                    <div class="first">
+                        <span class="last-month">26</span>
+                        <span class="last-month">27</span>
+                        <span class="last-month">28</span>
+                        <span class="last-month">29</span>
+                        <span class="last-month">30</span>
+                        <span id="click">01</span>
+                        <span id="click">02</span>
+                    </div>
+
+                    <div class="second">
+                        <span id="click">03</span>
+                        <span id="click">04</span>
+                        <span id="click">05</span>
+                        <span id="click">06</span>
+                        <span id="click">07</span>
+                        <span id="click">08</span>
+                        <span id="click">09</span>
+                    </div>
+
+                    <div class="third">
+                        <span id="click">10</span>
+                        <span id="click">11</span>
+                        <span id="click">12</span>
+                        <span id="click">13</span>
+                        <span id="click">14</span>
+                        <span id="click">15</span>
+                        <span id="click">16</span>
+                    </div>
+
+                    <div class="fourth">
+                        <span id="click">17</span>
+                        <span id="click">18</span>
+                        <span id="click">19</span>
+                        <span id="click">20</span>
+                        <span id="click">21</span>
+                        <span id="click">22</span>
+                        <span id="click">23</span>
+                    </div>
+
+                    <div class="fifth">
+                        <span id="click">24</span>
+                        <span id="click">25</span>
+                        <span id="click">26</span>
+                        <span id="click">27</span>
+                        <span id="click">27</span>
+                        <span id="click">29</span>
+                        <span id="click">30</span>
+                    </div>
+
+                    <div class="sixth">
+                        <span id="click">31</span>
+                        <span class="last-month">01</span>
+                        <span class="last-month">02</span>
+                        <span class="last-month">03</span>
+                        <span class="last-month">04</span>
+                        <span class="last-month">05</span>
+                        <span class="last-month">06</span>
+                        <span class="last-month">07</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
